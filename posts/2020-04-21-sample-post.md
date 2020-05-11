@@ -19,9 +19,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis elit sollicit
 Where the heck do I work by Cassidy Williams, [See the Pen](https://codepen.io/cassidoo/pen/GRpNBmG)
 
 ```js
-function () {
-  console.log("Hello")
-} 
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(pluginSyntaxHighlight);
+  eleventyConfig.setDataDeepMerge(true);
+
+  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
+
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+      "dd LLL yyyy"
+    );
+  });
 ```
 
 Quisque vel sem ligula. Phasellus non libero consectetur, hendrerit risus vitae, lacinia velit. Morbi lacinia blandit consequat. Phasellus velit eros, posuere suscipit velit eu, consectetur tristique orci. Mauris nunc nunc, tempor ultricies orci ac, venenatis porta purus. Nunc porttitor et magna ac congue. Maecenas porta scelerisque neque vestibulum semper. Mauris eu diam feugiat, eleifend orci sed, fermentum tellus. Phasellus a nibh pretium, aliquet metus in, posuere odio. Pellentesque finibus magna consequat sodales interdum. Nunc eu egestas odio, at pulvinar felis. Aenean ut metus mauris.
