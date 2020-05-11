@@ -1,5 +1,7 @@
 # 11ty-uwu-emergency-blog (´｡• ω •｡`)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/43ca04f9-b26a-43d6-88ac-08e27e2fd131/deploy-status)](https://app.netlify.com/sites/11ty-uwu-emergency-blog/deploys)
+
 This was a starter-kit for creating minimal blog, with minimal CSS from https://jrl.ninja/etc/1/ but with some tweaks!! Oh also these also a fork from :
 
 - https://glitch.com/~11ty
@@ -72,4 +74,4 @@ These site meta are on `metadata.json` file.
 
 Deploy on one click!
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)][deploy-to-netlify]
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)][https://app.netlify.com/start/deploy?repository=https://github.com/mandaputtra/11ty-uwu-emergency-blog/]
