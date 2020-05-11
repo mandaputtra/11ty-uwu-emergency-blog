@@ -1,0 +1,20 @@
+<ol class="postlist-wrapper" reversed>
+{% for post in postslist | reverse %}
+  <li class="postlist">
+    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">
+      {{ post.date | readableDate }}
+    </time>
+    <a class="postlist-title" href="{{ post.url | url }}">
+      {% if post.data.title %} {{ post.data.title }} {% else %}
+        <code>{{ post.url }}</code>
+      {% endif %}
+    </a>
+    {% for tag in post.data.tags %}
+      {%- if collections.tagList.indexOf(tag) != -1 -%}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <a class="postlist-tag" href="{{ tagUrl | url }}">{{ tag }}</a>
+      {%- endif -%}
+    {% endfor %}
+  </li>
+{% endfor %}
+</ol>

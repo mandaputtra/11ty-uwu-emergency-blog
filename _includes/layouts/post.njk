@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+---
+
+
+<article>
+  <header>
+    <h1>{{ title }}</h1>
+    {% if date %}
+      <h2>{{ date | readableDate }}</h2>
+    {% endif %}
+  </header>
+  <div>
+    <div>
+      {{ content | safe }}
+    </div>
+  </div>
+</article>
+<p><a href="{{ '/' | url }}">← Home</a></p>
