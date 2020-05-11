@@ -9,6 +9,10 @@ This was a starter-kit for creating minimal blog, with minimal CSS from https://
 
 These template was created to save your data while user browsing only 29Kb (10Kb if you remove the google fonts) usefull to store some emergency information. That's it! enjoy the template (*￣▽￣)b
 
+Deploy on one click!
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)][deploy-to-netlify]
+
 # Features
 
 - Small (10Kb) if you remove the google fonts
@@ -70,8 +74,4 @@ Just add new file with name in `posts` folder
 
 These site meta are on `metadata.json` file.
 
-## Deploy to netlify
-
-Deploy on one click!
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)][https://app.netlify.com/start/deploy?repository=https://github.com/mandaputtra/11ty-uwu-emergency-blog/]
+[deploy-to-netlify]: https://app.netlify.com/start/deploy?repository=https://github.com/mandaputtra/11ty-uwu-emergency-blog/
