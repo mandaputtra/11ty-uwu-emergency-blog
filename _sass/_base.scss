@@ -13,13 +13,13 @@ main {
 }
 
 p {
-  margin: 0.8rem 0;
+  margin: 0 0 1.75rem 0;
   line-height: 1.75;
 }
 
 h1 {
   font-size: 2rem;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
   font-weight: 600;
 }
 
@@ -41,8 +41,32 @@ h4 {
   font-weight: 600;
 }
 
+li {
+  line-height: 1.75;
+}
+
 .direct-link {
   font-size: 0.8rem;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  color: $background-color;
+}
+
+a {
+  color: $tags-color;
+}
+
+table tr {
+  background: $tags-color;
+  border-bottom: 1px solid
+}
+
+table th, table td {
+  padding: 10px 20px;
 }
 
 img {
@@ -55,15 +79,30 @@ pre {
   border-radius: $border-radius;
 }
 
+code {
+  font-family: monospace;
+  border: 1px color $border-color;
+  border-radius: $border-radius;
+  background-color: $border-color;
+  padding: .2em;
+  color: $tags-color;
+}
+
 blockquote {
+  margin: 1rem 0;
   background: $tags-color;
-  border-left: 10px solid $border-color;
+  border-left: 5px solid $border-color;
   color: $background-color;
   padding: 0.5em 10px;
   font-style: italic;
   quotes: "\201C""\201D""\2018""\2019";
   border-radius: $border-radius;
+
+  a {
+    color: $background-color;
+  }
 }
+
 
 blockquote:before {
   color: $background-color;
@@ -114,7 +153,7 @@ blockquote p {
 
 .footer-wrapper {
   margin-top: 2rem;
-  background-color: $border-color;
+  background-color: $tags-color;
   padding: .5rem 0.4rem;
   color: $background-color;
   font-weight: 600;
@@ -137,45 +176,56 @@ blockquote p {
   flex-direction: column;
 
   .postlist {
+    p {
+      line-height: 1.5;
+      margin: 0;
+    }
+
     margin: .5rem 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
-    .postlist-title {
-      margin-right: 1rem;
-    }
+      .postlist-title {
+        text-decoration: none;
+      }
 
-    .postlist-title::before {
-      content: "📖";
-    }
-
-    .postlist-date {
-      margin-right: 1rem;
-    }
-
-    .postlist-tag {
-      margin-right: 0.5rem;
-      text-decoration: none;
-      background-color: $tags-color;
-      color: $background-color;
-      padding: 0.1rem 0.3rem;
-      border-radius: $border-radius;
-    }
   }
 }
 
+article {
+  header {
+    margin-bottom: 1.75rem;
+  }
+  .date {
+    margin: 0;
+  }
+
+  .postlist-tag {
+    margin-right: 0.5rem;
+    text-decoration: none;
+    background-color: $tags-color;
+    color: $background-color;
+    padding: 0 .3em;
+    border-radius: $border-radius;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  li:last-child {
+    margin-bottom: 1.75rem;
+  }
+
+  li::before {
+    content: '-';
+    margin-right: 0.5em;
+  }
+}
 // the .full-bleed utilities
 // make full bleed on mobile / tablet device
 @include media-query($on-palm) {
-  pre {
-    width: 100vw;
-    max-width: 100ch;
-    position: relative;
-    left: 50%;
-    margin-left: -50vw !important;
-  }
-
   img {
     max-width: 100ch;
     position: relative;
@@ -201,7 +251,8 @@ blockquote p {
     text-align: center;
     
     h1 {
-      margin-bottom: 1rem;
+      font-size: 1em;
+      margin-bottom: .5em;
     }
 
     ul {

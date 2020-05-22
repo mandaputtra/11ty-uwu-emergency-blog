@@ -2,7 +2,7 @@
 tags: ["post", "javascript"]
 title: "A sample post with images and code'"
 description: "Now I know!"
-date: 2020-04-21
+date: 2020-04-20
 ---
 
 > Mighty blockquotes styles I stole from css-tricks - Manda Putra
